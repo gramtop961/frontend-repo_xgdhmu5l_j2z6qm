@@ -1,10 +1,10 @@
-import { Home, User, Folder, Mail } from 'lucide-react'
+import { Home, Server, Database, Mail } from 'lucide-react'
 
 const files = [
-  { id: 'home', name: 'home.js', icon: Home },
-  { id: 'about', name: 'About.jsx', icon: User },
-  { id: 'projects', name: 'Projects/index.js', icon: Folder },
-  { id: 'contact', name: 'Contact.css', icon: Mail },
+  { id: 'home', name: 'server.py', icon: Home },
+  { id: 'about', name: 'About.md', icon: Server },
+  { id: 'projects', name: 'services.json', icon: Database },
+  { id: 'contact', name: 'contact.yaml', icon: Mail },
 ]
 
 export default function Sidebar({ active, onSelect }) {

@@ -1,10 +1,10 @@
 import { X } from 'lucide-react'
 
 const tabs = [
-  { id: 'home', label: 'home.js' },
-  { id: 'about', label: 'about.html' },
-  { id: 'projects', label: 'project_details.json' },
-  { id: 'contact', label: 'contact.css' },
+  { id: 'home', label: 'server.py' },
+  { id: 'about', label: 'about.md' },
+  { id: 'projects', label: 'services.json' },
+  { id: 'contact', label: 'contact.yaml' },
 ]
 
 export default function TabBar({ active, onSelect }) {
