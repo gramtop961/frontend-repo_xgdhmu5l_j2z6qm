@@ -1,28 +1,21 @@
 import { useState } from 'react'
+import Sidebar from './components/Sidebar'
+import TabBar from './components/TabBar'
+import EditorPane from './components/EditorPane'
+import StatusBar from './components/StatusBar'
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const [active, setActive] = useState('home')
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
-      </div>
+    <div className="min-h-screen bg-[#1e1e1e] text-gray-200 flex" role="application" aria-label="VSCode style portfolio">
+      <Sidebar active={active} onSelect={setActive} />
+
+      <main className="flex-1 flex flex-col min-w-0">
+        <TabBar active={active} onSelect={setActive} />
+        <EditorPane active={active} />
+        <StatusBar />
+      </main>
     </div>
   )
 }
-
-export default App
